@@ -1,0 +1,19 @@
+<div class="jumbotron mt-3">
+  <h1 class="display-3">ZONA PRIVADA!</h1>
+  <p class="lead">Estás en una zona privada</p>
+
+  <div class="card-columns">
+    <div class="card" *ngFor="let noticia of noticias">
+      <img class="card-img-top" src="{{noticia.urlToImage}}" alt="Card image cap" *ngIf="noticia.urlToImage">
+      <img class="card-img-top" src="https://www.narda-sts.com/fileadmin/_processed_/csm_no-image-available_EN_a7f9436f9f.png"
+        alt="Card image cap" *ngIf="!noticia.urlToImage">
+      <div class="card-body">
+        <h5 class="card-title">{{noticia.title}}</h5>
+        <p class="card-text">{{noticia.content}}</p>
+        <a href="{{noticia.url}}" class="btn btn-primary" target="_blank">Ver más</a>
+
+      </div>
+    </div>
+  </div>
+
+</div>
